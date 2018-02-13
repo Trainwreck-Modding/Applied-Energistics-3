@@ -1,0 +1,2 @@
+include 'Trainwreck-Lib'
+project(':Trainwreck-Lib').projectDir = new File('Trainwreck-Lib')
