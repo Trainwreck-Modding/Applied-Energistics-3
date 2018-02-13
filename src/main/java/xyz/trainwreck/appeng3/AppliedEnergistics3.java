@@ -14,37 +14,37 @@ import java.util.concurrent.TimeUnit;
 @Mod(modid = Reference.MODID, version = Reference.VERSION, name = Reference.MOD_NAME,dependencies = Reference.DEPENDENCIES)
 public class AppliedEnergistics3 {
 
-    public static Logger LOGGER = new Logger(xyz.trainwreck.Lib.Reference.MOD_NAME);
+    public static Logger LOGGER = new Logger(Reference.MOD_NAME);
     public static Stopwatch STOPWATCH = Stopwatch.createUnstarted();
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         STOPWATCH.start();
-        LOGGER.info("Pre-Init - Started");
+        LOGGER.info("[Pre-Init] Started");
 
         if (!SystemUtils.isJavaVersionAtLeast(JavaVersion.JAVA_1_8)) {
             throw new OutdatedJavaException(String.format("%s requires Java 8 or newer, Please update your java", Reference.MOD_NAME));
         }
 
-        LOGGER.info("Pre-Init - Finished - " + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms");
+        LOGGER.info("[Pre-Init] Finished <" + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms>");
         STOPWATCH.reset();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         STOPWATCH.start();
-        LOGGER.info("Initialization - Started");
+        LOGGER.info("[Init] Started");
 
-        LOGGER.info("Initialization - Finished - " + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms");
+        LOGGER.info("[Init] Finished <" + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms>");
         STOPWATCH.reset();
     }
 
     @Mod.EventHandler
     public void preInit(FMLPostInitializationEvent event) {
         STOPWATCH.start();
-        LOGGER.info("Post-Initialization - Started");
+        LOGGER.info("[Post-Init] Started");
 
-        LOGGER.info("Post-Initialization - Finished - " + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms");
+        LOGGER.info("[Post-Init] Finished <" + STOPWATCH.elapsed(TimeUnit.MILLISECONDS) + "ms>");
         STOPWATCH.reset();
     }
 }
