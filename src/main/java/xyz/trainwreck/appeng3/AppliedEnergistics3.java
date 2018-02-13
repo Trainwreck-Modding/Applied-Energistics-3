@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.commons.lang3.JavaVersion;
 import org.apache.commons.lang3.SystemUtils;
-import xyz.trainwreck.appeng3.Reference;
 import xyz.trainwreck.Lib.common.exception.OutdatedJavaException;
 import xyz.trainwreck.Lib.common.util.Logger;
 
