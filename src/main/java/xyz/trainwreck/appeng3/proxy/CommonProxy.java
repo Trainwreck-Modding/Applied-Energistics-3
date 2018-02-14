@@ -12,13 +12,14 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xyz.trainwreck.Lib.Reference;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
 import xyz.trainwreck.appeng3.AppliedEnergistics3;
+import xyz.trainwreck.appeng3.common.blocks.Blocks;
 
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent event){
-        //RegistryHelper.addBlockToRegistry(Reference.MODID, TestBlock.class, TestItemBlock.class);
+        Blocks.registerBlocks();
     }
     public void init(FMLInitializationEvent event){
 
@@ -29,9 +30,9 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        AppliedEnergistics3.LOGGER.info(RegistryHelper.getBlocks());
 
         for (Block block : RegistryHelper.getBlocks()){
+            AppliedEnergistics3.LOGGER.info(block.getUnlocalizedName());
             event.getRegistry().register(block);
         }
 
