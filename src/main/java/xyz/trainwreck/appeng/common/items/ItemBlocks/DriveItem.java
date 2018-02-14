@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng3.common.items.ItemBlocks;
+package xyz.trainwreck.appeng.common.items.ItemBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

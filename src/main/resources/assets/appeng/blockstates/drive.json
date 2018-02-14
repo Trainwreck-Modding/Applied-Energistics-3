@@ -3,15 +3,11 @@
   "defaults": {
     "textures": {
       "all": "blocks/stone"
-    },
-    "model": "appeng3:DriveModel"
+    }
   },
   "variants": {
     "normal": [
-      {}
-    ],
-    "inventory": [
-      {}
+      { "model": "appeng:drive" }
     ]
   }
 }

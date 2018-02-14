@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng3.common.tileentity;
+package xyz.trainwreck.appeng.common.tileentity;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -7,7 +7,6 @@ import net.minecraft.util.ITickable;
 import xyz.trainwreck.Lib.common.inventory.InternalInventory;
 import xyz.trainwreck.Lib.common.inventory.InventoryOperation;
 import xyz.trainwreck.Lib.common.tileentity.TileInventoryBase;
-import xyz.trainwreck.appeng3.AppliedEnergistics3;
 
 public class DriveTileEntity extends TileInventoryBase implements ITickable {
 

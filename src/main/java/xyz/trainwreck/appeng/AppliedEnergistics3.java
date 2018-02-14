@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng3;
+package xyz.trainwreck.appeng;
 
 import com.google.common.base.Stopwatch;
 import net.minecraftforge.fml.common.Mod;
@@ -10,13 +10,13 @@ import org.apache.commons.lang3.JavaVersion;
 import org.apache.commons.lang3.SystemUtils;
 import xyz.trainwreck.Lib.common.exception.OutdatedJavaException;
 import xyz.trainwreck.Lib.common.util.Logger;
-import xyz.trainwreck.appeng3.proxy.CommonProxy;
+import xyz.trainwreck.appeng.proxy.CommonProxy;
 
 import java.util.concurrent.TimeUnit;
 @Mod(modid = Reference.MODID, version = Reference.VERSION, name = Reference.MOD_NAME,dependencies = Reference.DEPENDENCIES)
 public class AppliedEnergistics3 {
 
-    @SidedProxy(clientSide = "xyz.trainwreck.appeng3.proxy.ClientProxy", serverSide = "xyz.trainwreck.appeng3.proxy.ServerProxy")
+    @SidedProxy(clientSide = "xyz.trainwreck.appeng.proxy.ClientProxy", serverSide = "xyz.trainwreck.appeng.proxy.ServerProxy")
     public static CommonProxy proxy;
 
 

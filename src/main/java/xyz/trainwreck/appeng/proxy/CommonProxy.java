@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng3.proxy;
+package xyz.trainwreck.appeng.proxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -10,8 +10,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
-import xyz.trainwreck.appeng3.AppliedEnergistics3;
-import xyz.trainwreck.appeng3.common.blocks.Blocks;
+import xyz.trainwreck.appeng.AppliedEnergistics3;
+import xyz.trainwreck.appeng.common.blocks.Blocks;
 
 
 @Mod.EventBusSubscriber
@@ -38,8 +38,9 @@ public class CommonProxy {
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        for (ItemBlock itemBlock : RegistryHelper.getItems())
+        for (ItemBlock itemBlock : RegistryHelper.getItems()) {
+            AppliedEnergistics3.LOGGER.info(itemBlock.getUnlocalizedName());
             event.getRegistry().register(itemBlock);
+        }
     }
-
 }

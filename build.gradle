@@ -20,8 +20,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 
 
 version = "1.0"
-group = "xyz.trainwreck.appeng3" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "appeng3"
+group = "xyz.trainwreck.appeng" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "appeng"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {

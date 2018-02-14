@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng3;
+package xyz.trainwreck.appeng;
 
 public class Reference {
     public static final String MODID = "appeng";

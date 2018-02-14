@@ -1,10 +1,10 @@
-package xyz.trainwreck.appeng3.common.blocks.storage;
+package xyz.trainwreck.appeng.common.blocks.storage;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import xyz.trainwreck.Lib.common.blocks.BlockTileBase;
-import xyz.trainwreck.appeng3.Reference;
-import xyz.trainwreck.appeng3.common.tileentity.DriveTileEntity;
+import xyz.trainwreck.appeng.Reference;
+import xyz.trainwreck.appeng.common.tileentity.DriveTileEntity;
 
 public class Drive extends BlockTileBase {
     public Drive() {
@@ -12,5 +12,9 @@ public class Drive extends BlockTileBase {
         setTileEntity(DriveTileEntity.class);
         setCreativeTab(CreativeTabs.TRANSPORTATION);
         setInternalName("drive");
+    }
+
+    public String getInternalName() {
+        return this.internalName;
     }
 }
