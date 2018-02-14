@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import xyz.trainwreck.Lib.Reference;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
 import xyz.trainwreck.appeng3.AppliedEnergistics3;
 import xyz.trainwreck.appeng3.common.blocks.Blocks;
