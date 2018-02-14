@@ -8,7 +8,7 @@ import xyz.trainwreck.appeng3.common.tileentity.DriveTileEntity;
 
 public class Drive extends BlockTileBase {
     public Drive() {
-        super(Material.CIRCUITS, "drivedad", Reference.MODID);
+        super(Material.CIRCUITS, "drive", Reference.MODID);
         setTileEntity(DriveTileEntity.class);
         setCreativeTab(CreativeTabs.TRANSPORTATION);
         setInternalName("drive");

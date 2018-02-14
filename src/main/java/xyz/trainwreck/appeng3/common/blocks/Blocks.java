@@ -5,7 +5,6 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import xyz.trainwreck.Lib.common.blocks.BlockBase;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
-import xyz.trainwreck.appeng3.AppliedEnergistics3;
 import xyz.trainwreck.appeng3.Reference;
 import xyz.trainwreck.appeng3.common.blocks.storage.Drive;
 import xyz.trainwreck.appeng3.common.items.ItemBlocks.DriveItem;
