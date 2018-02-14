@@ -1,13 +1,10 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "all": "blocks/stone"
-    }
-  },
   "variants": {
     "normal": [
       { "model": "appeng:drive" }
+    ],
+    "inventory": [
+      { "model": "minecraft:cube_all" }
     ]
   }
 }

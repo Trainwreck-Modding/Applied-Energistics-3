@@ -7,14 +7,13 @@ import xyz.trainwreck.appeng.Reference;
 import xyz.trainwreck.appeng.common.tileentity.DriveTileEntity;
 
 public class Drive extends BlockTileBase {
+
+    private static String name = "drive";
+
     public Drive() {
-        super(Material.CIRCUITS, "drive", Reference.MODID);
+        super(Material.CIRCUITS, name, Reference.MODID);
         setTileEntity(DriveTileEntity.class);
         setCreativeTab(CreativeTabs.TRANSPORTATION);
-        setInternalName("drive");
-    }
-
-    public String getInternalName() {
-        return this.internalName;
+        setInternalName(name);
     }
 }

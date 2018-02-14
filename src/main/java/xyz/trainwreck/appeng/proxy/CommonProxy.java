@@ -13,34 +13,38 @@ import xyz.trainwreck.Lib.common.registry.RegistryHelper;
 import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.common.blocks.Blocks;
 
+import java.util.Objects;
+
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
 
-    public void preInit(FMLPreInitializationEvent event){
+    public void preInit(FMLPreInitializationEvent event) {
         Blocks.registerBlocks();
     }
-    public void init(FMLInitializationEvent event){
+
+    public void init(FMLInitializationEvent event) {
 
     }
-    public void postInit(FMLPostInitializationEvent event){
+
+    public void postInit(FMLPostInitializationEvent event) {
 
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
 
-        for (Block block : RegistryHelper.getBlocks()){
+        for (Block block : RegistryHelper.getBlocks()) {
             AppliedEnergistics3.LOGGER.info(block.getUnlocalizedName());
             event.getRegistry().register(block);
         }
-
     }
+
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        for (ItemBlock itemBlock : RegistryHelper.getItems()) {
-            AppliedEnergistics3.LOGGER.info(itemBlock.getUnlocalizedName());
-            event.getRegistry().register(itemBlock);
+        for (Item item : RegistryHelper.getItems()) {
+            AppliedEnergistics3.LOGGER.info(item.getUnlocalizedName());
+            event.getRegistry().register(item);
         }
     }
 }

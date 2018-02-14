@@ -13,7 +13,8 @@ import xyz.trainwreck.Lib.common.util.Logger;
 import xyz.trainwreck.appeng.proxy.CommonProxy;
 
 import java.util.concurrent.TimeUnit;
-@Mod(modid = Reference.MODID, version = Reference.VERSION, name = Reference.MOD_NAME,dependencies = Reference.DEPENDENCIES)
+
+@Mod(modid = Reference.MODID, version = Reference.VERSION, name = Reference.MOD_NAME, dependencies = Reference.DEPENDENCIES)
 public class AppliedEnergistics3 {
 
     @SidedProxy(clientSide = "xyz.trainwreck.appeng.proxy.ClientProxy", serverSide = "xyz.trainwreck.appeng.proxy.ServerProxy")
@@ -22,8 +23,6 @@ public class AppliedEnergistics3 {
 
     public static Logger LOGGER = new Logger(Reference.MOD_NAME);
     public static Stopwatch STOPWATCH = Stopwatch.createUnstarted();
-
-
 
 
     @Mod.EventHandler

@@ -1,5 +1,6 @@
 package xyz.trainwreck.appeng.proxy;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -12,6 +13,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import xyz.trainwreck.Lib.common.registry.RegistryHelper;
+import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.Reference;
 import xyz.trainwreck.appeng.common.blocks.Blocks;
 
@@ -36,11 +39,8 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public static void RegisterModels(ModelRegistryEvent event) {
-
-        Item itemBlock = Item.getItemFromBlock(Blocks.DRIVE.getBlocks());
-        ModelResourceLocation model = new ModelResourceLocation(String.format("%s:%s", Reference.MODID, Blocks.DRIVE.getName()), "inventory");
-        ModelBakery.registerItemVariants(itemBlock, model);
-        ItemMeshDefinition meshDefinition = stack -> model;
-        ModelLoader.setCustomMeshDefinition(itemBlock, meshDefinition);
+        for (Block block : RegistryHelper.getBlocks()) {
+            RegistryHelper.initItemBlocks(Reference.MODID, block);
+        }
     }
 }

@@ -1,24 +1,20 @@
 package xyz.trainwreck.appeng.common.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import xyz.trainwreck.Lib.common.blocks.BlockBase;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
 import xyz.trainwreck.appeng.Reference;
 import xyz.trainwreck.appeng.common.blocks.storage.Drive;
-import xyz.trainwreck.appeng.common.items.ItemBlocks.DriveItem;
 
 public enum Blocks {
-    DRIVE(Drive.class, DriveItem.class);
+    DRIVE(Drive.class);
 
     private final Class<? extends BlockBase> blockClass;
-    private final Class<? extends ItemBlock> itemBlockClass;
     private Block block;
 
-    Blocks(Class<? extends BlockBase> blockClass, Class<? extends ItemBlock> itemBlockClass) {
+    Blocks(Class<? extends BlockBase> blockClass) {
         this.blockClass = blockClass;
-        this.itemBlockClass = itemBlockClass;
     }
 
     public static void registerBlocks() {
@@ -41,7 +37,7 @@ public enum Blocks {
     }
 
     private void registerBlock() {
-        block = RegistryHelper.addBlockToRegistry(Reference.MODID, blockClass, itemBlockClass);
+        block = RegistryHelper.addBlockToRegistry(Reference.MODID, blockClass);
     }
 
     public String getName() {

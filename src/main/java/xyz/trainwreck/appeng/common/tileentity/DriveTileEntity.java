@@ -10,7 +10,7 @@ import xyz.trainwreck.Lib.common.tileentity.TileInventoryBase;
 
 public class DriveTileEntity extends TileInventoryBase implements ITickable {
 
-    private InternalInventory inventory = new InternalInventory(this,3);
+    private InternalInventory inventory = new InternalInventory(this, 3);
 
     @Override
     public IInventory getInternalInventory() {
