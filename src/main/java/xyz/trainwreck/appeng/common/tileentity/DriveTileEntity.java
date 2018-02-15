@@ -13,6 +13,11 @@ public class DriveTileEntity extends TileInventoryBase implements ITickable {
     private InternalInventory inventory = new InternalInventory(this, 3);
 
     @Override
+    public boolean canBeRotated() {
+        return true;
+    }
+
+    @Override
     public IInventory getInternalInventory() {
         return inventory;
     }
@@ -41,6 +46,5 @@ public class DriveTileEntity extends TileInventoryBase implements ITickable {
 
     @Override
     public void update() {
-        //AppliedEnergistics3.LOGGER.info("meme");
     }
 }
