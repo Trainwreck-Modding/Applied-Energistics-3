@@ -28,7 +28,7 @@ public class BlockRotateBase extends BlockTileBase {
         TileEntityBase tileEntity = TileHelper.getTileEntity(worldIn, pos, TileEntityBase.class);
 
 
-        if (tileEntity.canBeRotated()) {
+        if (tileEntity != null && tileEntity.canBeRotated()) {
             //todo: make client side configuration for this option...
             if (placer.isSneaking()) {
                 tileEntity.setOrientation(placer.getHorizontalFacing());

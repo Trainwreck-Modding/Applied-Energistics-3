@@ -26,7 +26,7 @@ public class AppliedEnergistics3 {
     public static CreativeTabs tabAppEng = new CreativeTabs("Applied Energistics 3") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(Blocks.DRIVE.getBlocks());
+            return new ItemStack(Blocks.DRIVECAGE.getBlocks());
         }
     };
 

@@ -8,7 +8,7 @@ import xyz.trainwreck.Lib.common.inventory.InternalInventory;
 import xyz.trainwreck.Lib.common.inventory.InventoryOperation;
 import xyz.trainwreck.Lib.common.tileentity.TileInventoryBase;
 
-public class DriveTileEntity extends TileInventoryBase implements ITickable {
+public class TE_DriveCage extends TileInventoryBase implements ITickable {
 
     private InternalInventory inventory = new InternalInventory(this, 3);
 
