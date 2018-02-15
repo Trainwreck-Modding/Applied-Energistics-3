@@ -5,6 +5,10 @@
     ],
     "inventory": [
       { "model": "minecraft:cube_all" }
-    ]
+    ],
+    "facing=west": { "model": "appeng:drive", "uvblock": true },
+    "facing=east": { "model": "appeng:drive", "y": 180, "uvblock": true },
+    "facing=south": { "model": "appeng:drive", "y": 270, "uvblock": true },
+    "facing=north": { "model": "appeng:drive", "y": 90, "uvblock": true }
   }
 }
