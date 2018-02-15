@@ -7,14 +7,12 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import xyz.trainwreck.Lib.common.blocks.BlockTileBase;
-import xyz.trainwreck.Lib.common.tileentity.TileEntityBase;
 import xyz.trainwreck.Lib.common.util.TileHelper;
 import xyz.trainwreck.appeng.Reference;
-import xyz.trainwreck.appeng.common.blocks.BlockRotateBace;
+import xyz.trainwreck.appeng.common.blocks.BlockRotateBase;
 import xyz.trainwreck.appeng.common.tileentity.DriveTileEntity;
 
-public class Drive extends BlockRotateBace {
+public class Drive extends BlockRotateBase {
 
     private static String name = "drive";
 

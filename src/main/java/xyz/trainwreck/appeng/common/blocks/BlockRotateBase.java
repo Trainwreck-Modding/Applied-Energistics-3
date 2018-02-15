@@ -16,11 +16,11 @@ import xyz.trainwreck.Lib.common.util.TileHelper;
 
 import javax.annotation.Nullable;
 
-public class BlockRotateBace extends BlockTileBase {
+public class BlockRotateBase extends BlockTileBase {
 
     protected static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public BlockRotateBace(Material blockMaterialIn, String resourcePath, String modid) {
+    public BlockRotateBase(Material blockMaterialIn, String resourcePath, String modid) {
         super(blockMaterialIn, resourcePath, modid);
     }
 
