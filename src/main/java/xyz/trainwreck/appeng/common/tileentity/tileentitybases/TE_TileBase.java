@@ -37,8 +37,8 @@ public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITick
 
     @Override
     public void update() {
-        for (TileEntity tile : network.getNetwork()){
-            //AppliedEnergistics3.LOGGER.info(tile.getPos());
-        }
+        /*for (TileEntity tile : network.getNetwork()){
+            AppliedEnergistics3.LOGGER.info(tile.getPos());
+        }*/
     }
 }
