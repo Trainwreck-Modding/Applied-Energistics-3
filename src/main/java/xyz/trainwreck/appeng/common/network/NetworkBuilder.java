@@ -12,10 +12,11 @@ import java.util.List;
 
 public class NetworkBuilder {
 
-    private List<TileEntityBase> networkTiles = new ArrayList<>();
+    private List<TileEntity> networkTiles = new ArrayList<>();
     private List<TileEntity> tileEntities = new ArrayList<>();
 
-    public NetworkBuilder(IBlockAccess access, BlockPos pos) {
+    public NetworkBuilder(TileEntity tileEntity) {
+        networkTiles.add(tileEntity);
     }
 
 
@@ -23,7 +24,7 @@ public class NetworkBuilder {
         networkTiles.add(TileHelper.getTileEntity(access,pos, TE_TileBase.class));
     }
 
-    public List<TileEntityBase> getNetwork(){
+    public List<TileEntity> getNetwork(){
         return networkTiles;
     }
 }
