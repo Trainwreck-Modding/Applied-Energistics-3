@@ -2,13 +2,17 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "all": "minecraft:blocks/stone"
+      "all": "minecraft:blocks/stone",
+      "particle": "minecraft:blocks/stone"
     },
     "model": "appeng:drive_cage",
     "transform": "forge:default-block",
     "uvblock": true
   },
   "variants": {
+    "normal": [
+      { "model": "appeng:drive_cage" }
+    ],
     "inventory": [
       { "model": "minecraft:cube_all" }
     ],

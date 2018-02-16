@@ -63,9 +63,9 @@ public class DriveCage extends BlockRotateBase {
 
     @Override
     public void onNeighborChange(IBlockAccess world, BlockPos pos, BlockPos neighbor) {
-        TileEntity tileBace = TileHelper.getTileEntity(world,pos,TileEntity.class);
-        if(tileBace instanceof AppliedNetwork){
-            ((AppliedNetwork) tileBace).upDateNetwork();
+        TileEntity tileBase = TileHelper.getTileEntity(world,pos,TileEntity.class);
+        if(tileBase instanceof AppliedNetwork){
+            ((AppliedNetwork) tileBase).upDateNetwork();
         }
 
     }
