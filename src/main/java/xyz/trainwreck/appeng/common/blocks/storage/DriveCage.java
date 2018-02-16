@@ -31,11 +31,6 @@ public class DriveCage extends BlockRotateBase {
         setInternalName(name);
     }
 
-    @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        TE_TileBase tileBase = TileHelper.getTileEntity(worldIn,pos,TE_TileBase.class);
-        tileBase.upDateNetwork();
-    }
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

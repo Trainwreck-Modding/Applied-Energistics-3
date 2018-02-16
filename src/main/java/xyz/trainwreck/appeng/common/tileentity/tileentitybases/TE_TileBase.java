@@ -8,18 +8,22 @@ import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.network.NetworkBuilder;
 
 public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
-    NetworkBuilder network = new NetworkBuilder();
+    NetworkBulder network = new NetworkBulder(this);
+
+
 
 
     @Override
-    public void upDateNetwork() {
-        network.addToNetwork(getWorld(),getPos());
+    public void upDateNetwork(IBlockAccess access, BlockPos pos) {
+        network.addToNetwork(access,pos);
+
+        for (TileEntity tile : network.getNetwork()){
+            AppliedEnergistics3.LOGGER.info(tile);
+        }
     }
 
     @Override
     public void update() {
-        for (TileEntity tile : network.getNetwork()){
-            AppliedEnergistics3.LOGGER.info(tile);
-        }
+
     }
 }
