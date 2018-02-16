@@ -1,5 +1,6 @@
 package xyz.trainwreck.appeng.common.tileentity.tileentitybases;
 
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -9,17 +10,17 @@ import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.network.NetworkBulder;
 
 public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
-    NetworkBulder network;
+    NetworkBulder network = new NetworkBulder();
 
 
     @Override
-    public void upDateNetwork(IBlockAccess access, BlockPos pos) {
-        network.addToNetwork(access,pos);
+    public void upDateNetwork() {
+        network.addToNetwork(getWorld(),getPos());
     }
 
     @Override
     public void update() {
-        for (TileEntityBase tile : network.getNetwork()){
+        for (TileEntity tile : network.getNetwork()){
             AppliedEnergistics3.LOGGER.info(tile);
         }
     }

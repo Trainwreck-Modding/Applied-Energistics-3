@@ -33,7 +33,8 @@ public class DriveCage extends BlockRotateBase {
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-
+        TE_TileBase tileBase = TileHelper.getTileEntity(worldIn,pos,TE_TileBase.class);
+        tileBase.upDateNetwork();
     }
 
     @Override
@@ -64,7 +65,7 @@ public class DriveCage extends BlockRotateBase {
     public void onNeighborChange(IBlockAccess world, BlockPos pos, BlockPos neighbor) {
         TileEntity tileBace = TileHelper.getTileEntity(world,pos,TileEntity.class);
         if(tileBace instanceof AppliedNetwork){
-            ((AppliedNetwork) tileBace).upDateNetwork(world,pos);
+            ((AppliedNetwork) tileBace).upDateNetwork();
         }
 
     }
