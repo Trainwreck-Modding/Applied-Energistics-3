@@ -12,8 +12,10 @@ import xyz.trainwreck.appeng.common.network.NetworkBuilder;
 public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
     NetworkBuilder network = new NetworkBuilder(this);
 
-
-
+    @Override
+    public boolean canBeRotated() {
+        return true;
+    }
 
     @Override
     public void upDateNetwork(IBlockAccess access, BlockPos pos) {

@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import xyz.trainwreck.Lib.common.blocks.BlockTileBase;
 import xyz.trainwreck.Lib.common.tileentity.TileEntityBase;
 import xyz.trainwreck.Lib.common.util.TileHelper;
+import xyz.trainwreck.appeng.AppliedEnergistics3;
 
 import javax.annotation.Nullable;
 
@@ -29,7 +30,6 @@ public class BlockRotateBase extends BlockTileBase {
 
 
         if (tileEntity != null && tileEntity.canBeRotated()) {
-            //todo: make client side configuration for this option...
             if (placer.isSneaking()) {
                 tileEntity.setOrientation(placer.getHorizontalFacing());
             } else {

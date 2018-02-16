@@ -10,6 +10,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import xyz.trainwreck.Lib.common.tileentity.TileEntityBase;
 import xyz.trainwreck.Lib.common.util.TileHelper;
 import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.Reference;
@@ -34,7 +35,7 @@ public class DriveCage extends BlockRotateBase {
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-        TE_DriveCage tileEntity = TileHelper.getTileEntity(worldIn, pos, TE_DriveCage.class);
+        TileEntityBase tileEntity = TileHelper.getTileEntity(worldIn, pos, TileEntityBase.class);
         if (tileEntity != null && tileEntity.canBeRotated()) {
             return state.withProperty(FACING, tileEntity.getForward());
         }
