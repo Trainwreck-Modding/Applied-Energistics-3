@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng.common.tileentity.tileentitybases;
+package xyz.trainwreck.appeng.common.tileentity;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
@@ -9,7 +9,7 @@ import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.network.NetworkBuilder;
 
-public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
+public class TE_TileController extends TileEntityBase implements AppliedNetwork, ITickable {
     protected NetworkBuilder network = new NetworkBuilder(this);
 
     @Override

@@ -5,10 +5,12 @@ import net.minecraft.item.ItemStack;
 import xyz.trainwreck.Lib.common.blocks.BlockBase;
 import xyz.trainwreck.Lib.common.registry.RegistryHelper;
 import xyz.trainwreck.appeng.Reference;
-import xyz.trainwreck.appeng.common.blocks.storage.DriveCage;
+import xyz.trainwreck.appeng.common.blocks.storage.CableBlock;
+import xyz.trainwreck.appeng.common.blocks.storage.Controller;
 
 public enum Blocks {
-    DRIVECAGE(DriveCage.class);
+    DRIVECAGE(Controller.class),
+    CABLE(CableBlock.class);
 
     private final Class<? extends BlockBase> blockClass;
     private Block block;
