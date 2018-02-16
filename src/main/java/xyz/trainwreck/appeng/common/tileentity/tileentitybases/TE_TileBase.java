@@ -10,7 +10,7 @@ import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.network.NetworkBuilder;
 
 public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
-    NetworkBuilder network = new NetworkBuilder(this);
+    protected NetworkBuilder network = new NetworkBuilder(this);
 
     @Override
     public boolean canBeRotated() {
@@ -21,13 +21,24 @@ public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITick
     public void upDateNetwork(IBlockAccess access, BlockPos pos) {
         network.addToNetwork(access,pos);
 
-        for (TileEntity tile : network.getNetwork()){
-            AppliedEnergistics3.LOGGER.info(tile);
-        }
+
     }
 
     @Override
-    public void update() {
+    public NetworkBuilder getNetworkBulder() {
+        return network;
+    }
 
+    @Override
+    public void setNetworkBulder(NetworkBuilder networkBulder) {
+        this.network = networkBulder;
+    }
+
+
+    @Override
+    public void update() {
+        for (TileEntity tile : network.getNetwork()){
+            AppliedEnergistics3.LOGGER.info(tile.getPos());
+        }
     }
 }

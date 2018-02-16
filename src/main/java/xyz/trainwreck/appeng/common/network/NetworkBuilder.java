@@ -5,6 +5,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import xyz.trainwreck.Lib.common.tileentity.TileEntityBase;
 import xyz.trainwreck.Lib.common.util.TileHelper;
+import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.common.tileentity.tileentitybases.TE_TileBase;
 
 import java.util.ArrayList;
@@ -22,6 +23,9 @@ public class NetworkBuilder {
 
     public void addToNetwork(IBlockAccess access, BlockPos pos){
         networkTiles.add(TileHelper.getTileEntity(access,pos, TE_TileBase.class));
+    }
+    public void removeFromNetwork(TileEntity tileEntity){
+        AppliedEnergistics3.LOGGER.info(networkTiles.remove(tileEntity));
     }
 
     public List<TileEntity> getNetwork(){

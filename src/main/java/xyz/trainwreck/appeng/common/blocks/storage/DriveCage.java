@@ -16,6 +16,7 @@ import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.Reference;
 import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.blocks.BlockRotateBase;
+import xyz.trainwreck.appeng.common.network.NetworkBuilder;
 import xyz.trainwreck.appeng.common.tileentity.TE_DriveCage;
 import xyz.trainwreck.appeng.common.tileentity.tileentitybases.TE_TileBase;
 
@@ -60,8 +61,17 @@ public class DriveCage extends BlockRotateBase {
     @Override
     public void onNeighborChange(IBlockAccess world, BlockPos pos, BlockPos neighbor) {
         TileEntity tileBase = TileHelper.getTileEntity(world,pos,TileEntity.class);
+
         if(tileBase instanceof AppliedNetwork){
             ((AppliedNetwork) tileBase).upDateNetwork(world,pos);
+        }
+        if(tileBase instanceof AppliedNetwork&&world.isAirBlock(neighbor)){
+            NetworkBuilder network = ((AppliedNetwork) tileBase).getNetworkBulder();
+            for(TileEntity tileEntity : network.getNetwork()){
+                if(tileEntity == world.getTileEntity(pos)){
+                    network.removeFromNetwork(tileEntity);
+                }
+            }
         }
 
     }
