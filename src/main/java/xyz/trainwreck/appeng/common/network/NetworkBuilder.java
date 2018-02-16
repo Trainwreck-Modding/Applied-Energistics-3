@@ -25,7 +25,7 @@ public class NetworkBuilder {
         networkTiles.add(TileHelper.getTileEntity(access,pos, TE_TileBase.class));
     }
     public void removeFromNetwork(TileEntity tileEntity){
-        AppliedEnergistics3.LOGGER.info(networkTiles.remove(tileEntity));
+        networkTiles.remove(tileEntity);
     }
 
     public List<TileEntity> getNetwork(){
