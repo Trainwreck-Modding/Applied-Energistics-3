@@ -1,14 +1,30 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "minecraft:blocks/stone"
+    },
+    "model": "appeng:drive_cage",
+    "transform": "forge:default-block",
+    "uvblock": true
+  },
   "variants": {
-    "normal": [
-      { "model": "appeng:drive" }
-    ],
     "inventory": [
       { "model": "minecraft:cube_all" }
     ],
-    "facing=west": { "model": "appeng:drive", "uvblock": true },
-    "facing=east": { "model": "appeng:drive", "y": 180, "uvblock": true },
-    "facing=south": { "model": "appeng:drive", "y": 270, "uvblock": true },
-    "facing=north": { "model": "appeng:drive", "y": 90, "uvblock": true }
+    "facing": {
+      "north": {
+        "y": 90
+      },
+      "east": {
+        "y": 180
+      },
+      "south": {
+        "y": 270
+      },
+      "west": {
+
+      }
+    }
   }
 }

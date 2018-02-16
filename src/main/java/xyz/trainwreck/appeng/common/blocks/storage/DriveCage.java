@@ -1,6 +1,5 @@
 package xyz.trainwreck.appeng.common.blocks.storage;
 
-import io.netty.buffer.ByteBuf;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -17,7 +16,7 @@ import xyz.trainwreck.appeng.Reference;
 import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.blocks.BlockRotateBase;
 import xyz.trainwreck.appeng.common.tileentity.TE_DriveCage;
-import xyz.trainwreck.appeng.common.tileentity.tileentitybaces.TE_TileBace;
+import xyz.trainwreck.appeng.common.tileentity.tileentitybases.TE_TileBase;
 
 public class DriveCage extends BlockRotateBase {
 
@@ -27,7 +26,7 @@ public class DriveCage extends BlockRotateBase {
     public DriveCage() {
         super(Material.CIRCUITS, name, Reference.MODID);
         setDefaultState(blockState.getBaseState().withProperty(FACING,EnumFacing.NORTH));
-        setTileEntity(TE_TileBace.class);
+        setTileEntity(TE_TileBase.class);
         setCreativeTab(AppliedEnergistics3.tabAppEng);
         setInternalName(name);
     }

@@ -1,4 +1,4 @@
-package xyz.trainwreck.appeng.common.tileentity.tileentitybaces;
+package xyz.trainwreck.appeng.common.tileentity.tileentitybases;
 
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
@@ -8,7 +8,7 @@ import xyz.trainwreck.appeng.AppliedEnergistics3;
 import xyz.trainwreck.appeng.api.util.AppliedNetwork;
 import xyz.trainwreck.appeng.common.network.NetworkBulder;
 
-public class TE_TileBace extends TileEntityBase implements AppliedNetwork, ITickable {
+public class TE_TileBase extends TileEntityBase implements AppliedNetwork, ITickable {
     NetworkBulder network;
 
 

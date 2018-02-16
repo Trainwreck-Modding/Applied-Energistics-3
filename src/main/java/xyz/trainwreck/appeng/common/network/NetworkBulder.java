@@ -3,11 +3,9 @@ package xyz.trainwreck.appeng.common.network;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.fml.relauncher.FMLSecurityManager;
 import xyz.trainwreck.Lib.common.tileentity.TileEntityBase;
 import xyz.trainwreck.Lib.common.util.TileHelper;
-import xyz.trainwreck.appeng.AppliedEnergistics3;
-import xyz.trainwreck.appeng.common.tileentity.tileentitybaces.TE_TileBace;
+import xyz.trainwreck.appeng.common.tileentity.tileentitybases.TE_TileBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +20,7 @@ public class NetworkBulder{
 
 
     public void addToNetwork(IBlockAccess access, BlockPos pos){
-        networkTiles.add(TileHelper.getTileEntity(access,pos, TE_TileBace.class));
+        networkTiles.add(TileHelper.getTileEntity(access,pos, TE_TileBase.class));
     }
 
     public List<TileEntityBase> getNetwork(){
