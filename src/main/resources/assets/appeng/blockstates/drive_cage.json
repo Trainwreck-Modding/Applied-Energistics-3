@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "all": "minecraft:blocks/stone",
+      "stone": "minecraft:blocks/stone",
       "particle": "minecraft:blocks/stone"
     },
     "model": "appeng:drive_cage",
@@ -17,6 +17,9 @@
       { "model": "minecraft:cube_all" }
     ],
     "facing": {
+      "west": {
+        "y": 0
+      },
       "north": {
         "y": 90
       },
@@ -25,9 +28,6 @@
       },
       "south": {
         "y": 270
-      },
-      "west": {
-
       }
     }
   }
