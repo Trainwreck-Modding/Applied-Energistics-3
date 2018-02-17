@@ -61,7 +61,7 @@ public class AppliedEnergistics3 {
     }
 
     @Mod.EventHandler
-    public void preInit(FMLPostInitializationEvent event) {
+    public void postInit(FMLPostInitializationEvent event) {
         STOPWATCH.start();
         LOGGER.info("[Post-Init] Started");
 
